@@ -1,0 +1,43 @@
+.Option {
+  display: flex;
+  margin: 10px;
+  
+}
+
+.Label {
+  color: #fcbf49;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.LessButton {
+  background: none;
+  border: 2px solid #d62828;
+  color: #d62828;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 80px;
+}
+
+.LessButtonDisable {
+  background: none;
+  color: #004266;
+  border: 2px solid #004266;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 80px;
+}
+
+.MoreButton {
+  background: none;
+  border: 2px solid #f77f00;
+  color: #f77f00;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 80px;
+  /* margin: 0 10px; */
+}
+
+.OptionButtons{
+margin: auto;
+}
