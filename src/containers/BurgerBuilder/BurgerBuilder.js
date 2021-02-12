@@ -21,6 +21,8 @@ class BurgerBuilder extends Component {
         salad: 0,
       },
       totalPrice: 0,
+      showModal: false,
+      purchased: false,
     };
   }
 
@@ -33,6 +35,31 @@ class BurgerBuilder extends Component {
     this.setState({
       ingredients: oldIngredients,
       totalPrice: newPrice,
+    });
+  };
+
+  purchaseModalHandler = () => {
+    this.setState({
+      showModal: true,
+    });
+  };
+
+  cancelPurchaseHandler = () => {
+    this.setState({
+      showModal: false,
+    });
+  };
+
+  purchaseBurgerHandler = () => {
+    this.setState({
+      showModal: true,
+    });
+  };
+
+  orderBurgerHandler = () => {
+    this.setState({
+      purchased: true,
+      showModal: false,
     });
   };
 
@@ -52,7 +79,6 @@ class BurgerBuilder extends Component {
     let disabled = null;
 
     for (const key in this.state.ingredients) {
-      console.log(key);
       disabled = { ...disabled, [key]: this.state.ingredients[key] <= 0 };
     }
 
@@ -60,10 +86,15 @@ class BurgerBuilder extends Component {
       <React.Fragment>
         <Burger ingredients={this.state.ingredients} />
         <BurgerOptions
+          showModal={this.state.showModal}
+          ingredients={this.state.ingredients}
           price={this.state.totalPrice}
           disabled={disabled}
           added={this.addedIngredientHandler}
           removed={this.removedIngredientHandler}
+          purchased={this.purchaseBurgerHandler}
+          cancelled={this.cancelPurchaseHandler}
+          ordered={this.orderBurgerHandler}
         />
       </React.Fragment>
     );
