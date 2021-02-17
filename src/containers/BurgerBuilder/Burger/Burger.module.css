@@ -1,6 +1,8 @@
 .Burger {
+    /* margin-top: 10vh; */
     width: 100%;
-    margin: auto;
+    margin: 0 auto ;
+    margin-top: 10vh;
     height: 250px;
     overflow: scroll;
     text-align: center;

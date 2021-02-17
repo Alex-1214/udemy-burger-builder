@@ -33,7 +33,7 @@ const burgerOptions = (props) => {
         <div className={modalclasses.ModalLabel}>This is a burger detail</div>
         <ul>
           {Object.keys(props.ingredients).map(item =>{
-            return <li>{item}</li>
+            return <li key={item}>{item}</li>
           })}
         </ul>
 

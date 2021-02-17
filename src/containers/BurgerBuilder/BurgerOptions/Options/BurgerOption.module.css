@@ -1,12 +1,14 @@
 .Option {
   display: flex;
+  justify-content: space-between;
+
   margin: 10px;
 }
 
 .Label {
   color: #fcbf49;
   font-weight: bold;
-  margin: 0 100px;
+  margin-left: 5vh;
 }
 
 .LessButton {
@@ -15,8 +17,8 @@
 }
 
 .LessButton:hover {
-  border: 2px solid #DB4343;
-  color: #DB4343;
+  border: 2px solid #db4343;
+  color: #db4343;
 }
 
 .LessButton:disabled {
@@ -35,10 +37,16 @@
 }
 
 .OptionButtons {
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.OptionButtons button {
   background: none;
   border-radius: 30px;
   cursor: pointer;
-  width: 80px;
+  width: 100px;
   padding: 2px;
+  margin: 0 10px;
 }

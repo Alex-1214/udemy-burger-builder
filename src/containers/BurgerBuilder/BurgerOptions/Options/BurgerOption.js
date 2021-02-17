@@ -6,16 +6,18 @@ const burgerOption = (props) => {
   return (
     <div className={classes.Option}>
       <label className={classes.Label}>{props.label}</label>
-        <button
-          className={[classes.OptionButtons, classes.LessButton].join(" ")}
+      <div className={classes.OptionButtons}>
+      <button
+          className={classes.LessButton}
           onClick={props.removed}
           disabled={props.disabled}
         >
           Less
         </button>
-        <button className={[classes.OptionButtons, classes.MoreButton].join(" ")} onClick={props.added}>
+        <button className={classes.MoreButton} onClick={props.added}>
           More
         </button>
+      </div>
     </div>
   );
 };

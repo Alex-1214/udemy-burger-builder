@@ -1,10 +1,11 @@
 import React from 'react';
-
-import classes from './Layout.module.css';
+import Toolbar from './UI/Toolbar/Toolbar'
+import SideDrawer from './UI/SideDrawer/SideDrawer'
 
 const layout = (props) => {
     return (<React.Fragment >
-        <div className={classes.Layout}>Hello - This is nav bar</div>
+        <SideDrawer/>
+        <Toolbar/>
         {props.children}
     </React.Fragment>)
 
