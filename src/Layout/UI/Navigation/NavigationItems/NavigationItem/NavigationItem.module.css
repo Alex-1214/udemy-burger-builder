@@ -6,19 +6,28 @@
 }
 
 .NavigationItem a {
-  color: #f77f00;
+  color: #004266;
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
   display: block;
 }
 
-.NavigationItem a:hover,
-.NavigationItem a:active,
-.NavigationItem a.active {
-  color: #40a4c8;
+.NavigationItem a:hover {
+  color: #d62828;
+  /* border: 2px solid #d62828; */
 }
 
+.NavigationItem a:active,
+.NavigationItem a.active {
+  color: #d62828;
+}
+
+.NavigationItem a.active:hover {
+  color: #f77f00;
+}
+
+/* Desktop Version */
 @media (min-width: 500px) {
   .NavigationItem {
     margin: 0;

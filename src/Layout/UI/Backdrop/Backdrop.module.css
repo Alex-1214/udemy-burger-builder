@@ -18,7 +18,7 @@
   position: fixed;
   top: 19%;
   left: 69%;
-  z-index: 1500;
+
   padding: 1px;
   transition: all 0.3s ease-out;
 }

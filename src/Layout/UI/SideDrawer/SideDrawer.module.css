@@ -5,7 +5,7 @@
   width: 300px;
   max-width: 60%;
   height: 100%;
-  z-index: 400;
+  z-index: 200;
   background-color: #fcbf49;
   transition: transform 0.3s ease-out;
 }
@@ -28,5 +28,5 @@
   display: flex;  
   height: 11%;
   justify-content: center;
-  margin: 10px 0 32px 0 ;
+  margin: 32px 0 32px 0 ;
 }
