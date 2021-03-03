@@ -1,52 +1,84 @@
-.Option {
-  display: flex;
-  justify-content: space-between;
+  .Option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
 
-  margin: 10px;
-}
+  .Label {
+    color: #fcbf49;
+    font-weight: bold;
+    margin-left: 10px;
+  }
 
-.Label {
-  color: #fcbf49;
-  font-weight: bold;
-  margin-left: 5vh;
-}
+  .OptionButtons {
+    display: flex;
+  }
 
-.LessButton {
-  border: 2px solid #d62828;
-  color: #d62828;
-}
+  .ButtonLabel {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
 
-.LessButton:hover {
-  border: 2px solid #db4343;
-  color: #db4343;
-}
+  .OptionButton {
+    background: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 40px;
+    height: 25px;
+    font-weight: bolder;
+  }
 
-.LessButton:disabled {
-  color: #004266;
-  border: 2px solid #004266;
-}
+  .LessButton {
+    border: 2px solid #d62828;
+    color: #d62828;
+  }
 
-.MoreButton {
-  border: 2px solid #f77f00;
-  color: #f77f00;
-}
+  .LessButton:hover {
+    border: 2px solid #db4343;
+    color: #db4343;
+  }
 
-.MoreButton:hover {
-  border: 2px solid #fcbf49;
-  color: #fcbf49;
-}
+  .LessButton:disabled {
+    color: #004266;
+    border: 2px solid #004266;
+  }
 
-.OptionButtons {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 100px;
-}
+  .MoreButton {
+    border: 2px solid #f77f00;
+    color: #f77f00;
+  }
 
-.OptionButtons button {
-  background: none;
-  border-radius: 30px;
-  cursor: pointer;
-  width: 100px;
-  padding: 2px;
-  margin: 0 10px;
-}
+  .MoreButton:hover {
+    border: 2px solid #fcbf49;
+    color: #fcbf49;
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 480px) {
+    .Option {
+      margin: 15px 25px;
+    }
+    .OptionButton {
+      width: 60px;
+      /* margin: 0 20px; */
+    }
+    .ButtonLabel {
+      display: block;
+    }
+    .ButtonIcon {
+      display: none;
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 992px) {
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width: 1200px) {
+  }
