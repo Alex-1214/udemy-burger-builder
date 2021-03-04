@@ -23,7 +23,7 @@
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .HamburgerMenu {
     display: none;
   }

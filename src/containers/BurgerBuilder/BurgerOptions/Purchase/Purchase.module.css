@@ -1,5 +1,6 @@
 .Purchase {
-  display: 70%;
+  display: flex;
+  justify-content: center;
   margin: auto;
   background: none;
   border: 5px solid #fcbf49;
@@ -8,20 +9,17 @@
   cursor: pointer;
   width: 180px;
   font-weight: bold;
-  margin-top: 30px;
-  padding: 10px 50px;
+  padding: 10px 0;
 }
 
-.Purchase:hover{
+.Purchase:hover {
   border: 5px solid #f77f00;
   color: #f77f00;
 }
 
 @media only screen and (max-width: 600px) {
   .Purchase {
-      /* margin: 20px 0 0 0; */
-      display: flex;
-      width: 150px;
-      text-align: center;
+    width: 150px;
+    margin-top: 30px;
   }
 }

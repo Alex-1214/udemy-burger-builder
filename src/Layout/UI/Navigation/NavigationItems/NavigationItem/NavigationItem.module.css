@@ -46,6 +46,7 @@
     border: 2px solid transparent;
     border-radius: 30px;
     cursor: pointer;
+    padding-bottom: 25px;
   }
 
   .NavigationItem a:hover {
