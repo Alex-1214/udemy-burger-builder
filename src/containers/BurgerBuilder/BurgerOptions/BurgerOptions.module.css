@@ -1,0 +1,37 @@
+.BuilderOptions {
+  margin: auto;
+  display: block;
+  text-align: left;
+  padding: 10px 0px;
+  width: 60%;
+  height: 35vh;
+  background-color: #003049;
+  /* background-image: linear-gradient(to bottom, #051937, #08244b, #0a305f, #0b3d75, #094a8b); */
+  border-radius: 10px;
+  color: #eae2b7;
+
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12); */
+}
+
+.TotalPrice {
+  text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .BuilderOptions {
+    width: 90%;
+    padding: 20px 10px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {…} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {…} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {…} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {…} */
