@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { Component } from "react";
-import Burger from "../BurgerBuilder/Burger/Burger";
-import BurgerOptions from "../BurgerBuilder/BurgerOptions/BurgerOptions";
+import Burger from "../../containers/Burger/Burger";
+import BurgerOptions from "../../containers/BurgerOptions/BurgerOptions";
 import Modal from "../../Layout/UI/Modal/Modal";
+import OrderSummary from "../../containers/BurgerOptions/OrderSummary/OrderSummary";
 
-
-import modalclasses from "../../Layout/UI/Modal/Modal.module.css";
+// import orderSummary from "./BurgerOptions/OrderSummary/OrderSummary";
 
 // const INGREDIENT_PRICE = {
 //   meat: 1.8,
@@ -83,28 +83,30 @@ class BurgerBuilder extends Component {
   };
 
   orderBurgerHandler = () => {
-    const data = {
-      ingredients: this.state.ingredients,
-      amount: 1,
-      ordered: new Date(),
-      customerId: "12345678",
-      method: "fastest",
-    };
+    // const data = {
+    //   ingredients: this.state.ingredients,
+    //   amount: 1,
+    //   ordered: new Date(),
+    //   customerId: "12345678",
+    //   method: "fastest",
+    // };
 
-    axios
-      .post(
-        "https://burger-graber-hunger-stopper-default-rtdb.firebaseio.com/orders.json",
-        data
-      )
-      .then((response) => {
-        this.setState({
-          purchased: true,
-          showModal: false,
-        });
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    // axios
+    //   .post(
+    //     "https://burger-graber-hunger-stopper-default-rtdb.firebaseio.com/orders.json",
+    //     data
+    //   )
+    //   .then((response) => {
+    //     this.setState({
+    //       purchased: true,
+    //       showModal: false,
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.message);
+    //   });
+    this.props.history.push('/checkout');
+
   };
 
   removedIngredientHandler = (type) => {
@@ -128,37 +130,16 @@ class BurgerBuilder extends Component {
 
     return (
       <React.Fragment>
-        <Modal show={this.state.showModal} cancelled={this.cancelPurchaseHandler}>
-          <div className={modalclasses.ModalLabel}>This is a burger detail</div>
-          <ul>
-            {Object.keys(this.state.ingredients).map((item) => {
-              return <li key={item}>{item}</li>;
-            })}
-          </ul>
-
-          <p className={modalclasses.ModalLabel}>
-            Total price: <strong>{this.state.totalPrice.toFixed(2)}</strong>
-          </p>
-          <div className={modalclasses.ModalButton}>
-            <button
-              className={[
-                modalclasses.CancelButton,
-                modalclasses.ModalButton,
-              ].join(" ")}
-              onClick={this.cancelPurchaseHandler}
-            >
-              Cancel
-            </button>
-            <button
-              className={[
-                modalclasses.OrderButton,
-                modalclasses.ModalButton,
-              ].join(" ")}
-              onClick={this.orderBurgerHandler}
-            >
-              Order
-            </button>
-          </div>
+        <Modal
+          show={this.state.showModal}
+          cancelled={this.cancelPurchaseHandler}
+        >
+          <OrderSummary
+            totalPrice={this.state.totalPrice}
+            ingredients={this.state.ingredients}
+            cancelPurchaseHandler={this.cancelPurchaseHandler}
+            orderBurgerHandler={this.orderBurgerHandler}
+          />
         </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BurgerOptions

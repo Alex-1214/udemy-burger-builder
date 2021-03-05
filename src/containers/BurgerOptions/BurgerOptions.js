@@ -1,10 +1,8 @@
 import React from "react";
 import BurgerOption from "../BurgerOptions/Options/BurgerOption";
 import PurchaseButton from "./Purchase/Purchase";
-import Modal from "../../../Layout/UI/Modal/Modal";
-
 import classes from "./BurgerOptions.module.css";
-import Spinner from "../../../Layout/UI/Spinner/Spinner";
+import Spinner from "../../Layout/UI/Spinner/Spinner";
 
 const options = [
   { label: "Cheese", type: "cheese" },
