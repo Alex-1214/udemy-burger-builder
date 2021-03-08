@@ -34,4 +34,11 @@
 /* Large devices (laptops/desktops, 992px and up) */
 /* @media only screen and (min-width: 992px) {…} */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {…} */
+@media only screen and (min-width: 1200px) {
+  .BuilderOptions {
+    font-size: 1.2rem;
+  }
+  .TotalPrice {
+    margin-top: 20px;
+  }
+}
