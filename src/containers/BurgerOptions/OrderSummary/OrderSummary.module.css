@@ -1,0 +1,29 @@
+.Title {
+  font-family: "Tillana", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #003049;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.ModalButton {
+  background: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 180px;
+  font-weight: bold;
+  margin: 20px 30px;
+}
+
+.OrderButton {
+  border: 5px solid #003049;
+  color: #003049;
+}
+
+.CancelButton {
+  border: 5px solid #d62828;
+  color: #d62828;
+  width: 100px;
+}
