@@ -14,6 +14,10 @@ const modal = (props) => {
           opacity: props.show ? "1" : "0",
         }}
       >
+        <div className={classes.CancelCircle} onClick={props.cancelled}></div>
+        <div className={classes.CancelSymbol} onClick={props.cancelled} >
+          &#10008;
+        </div>
         {props.children}
       </div>
     </React.Fragment>

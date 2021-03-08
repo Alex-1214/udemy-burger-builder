@@ -3,13 +3,13 @@ import NavigationItem from './NavigationItem/NavigationItem'
 
 import classes from './NavigationItems.module.css';
 
-const navigationItems = () => {
+const navigationItems = (props) => {
   return (
     <ul className={classes.NavigationItems}>
-      <NavigationItem link="/new" active>
+      <NavigationItem clicked={props.cancelled}link="/new" active>
         Burger Builder
       </NavigationItem>
-      <NavigationItem link="/my-orders">My orders</NavigationItem>
+      <NavigationItem clicked={props.cancelled} link="/my-orders">My Orders</NavigationItem>
     </ul>
   );
 };
