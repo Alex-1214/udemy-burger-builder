@@ -5,7 +5,7 @@ import classes from "./DrawerToggle.module.css";
 const drawerToggle = (props) => {
   return (
     <React.Fragment>
-      <div className={classes.DrawerToggle} onClick={props.clicked}>
+      <div className={classes.DrawerToggle}>
         Menu
       </div>
 
