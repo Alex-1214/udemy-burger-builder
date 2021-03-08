@@ -9,7 +9,7 @@ const navigationItems = (props) => {
       <NavigationItem clicked={props.cancelled}link="/new" active>
         Burger Builder
       </NavigationItem>
-      <NavigationItem clicked={props.cancelled} link="/my-orders">My orders</NavigationItem>
+      <NavigationItem clicked={props.cancelled} link="/my-orders">My Orders</NavigationItem>
     </ul>
   );
 };
