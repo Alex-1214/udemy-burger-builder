@@ -12,7 +12,7 @@ const burger = (props) => {
   });
   
   Object.keys(props.ingredients).some((item) => {
-    console.log(item, props.ingredients[item])
+    // console.log(item, props.ingredients[item])
     if (props.ingredients[item]> 0){
       newBurger = false;
       return

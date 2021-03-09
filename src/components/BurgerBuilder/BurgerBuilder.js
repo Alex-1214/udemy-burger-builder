@@ -80,32 +80,18 @@ class BurgerBuilder extends Component {
     this.setState({
       showModal: true,
     });
-  };
+  };  
 
   orderBurgerHandler = () => {
-    // const data = {
-    //   ingredients: this.state.ingredients,
-    //   amount: 1,
-    //   ordered: new Date(),
-    //   customerId: "12345678",
-    //   method: "fastest",
-    // };
+    let param = Object.keys(this.state.ingredients).map(key =>{
+     return [...[encodeURIComponent(key) + "=" + encodeURIComponent(this.state.ingredients[key])]]
+    })
 
-    // axios
-    //   .post(
-    //     "https://burger-graber-hunger-stopper-default-rtdb.firebaseio.com/orders.json",
-    //     data
-    //   )
-    //   .then((response) => {
-    //     this.setState({
-    //       purchased: true,
-    //       showModal: false,
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
-    this.props.history.push('/checkout');
+    this.props.history.push({
+      pathname: '/checkout',
+      search: '?' + param.join('&')
+    });
+
 
   };
 
