@@ -1,0 +1,57 @@
+.Card {
+  display: flex;
+  flex-flow: column ;
+  justify-content: space-between;
+  background-color: #fcbf49;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 10px 0;
+}
+
+.BurgerLogo{
+  display: flex;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.Rating{
+  margin: 10px auto;
+}
+
+.Ingredients {
+  margin-top: 20px;
+  /* font-size: 1.1rem; */
+}
+.Ingredients label {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.Ingredients ul {
+  margin: 0 ;
+  padding: 0; 
+}
+
+.Ingredients li {
+  display: inline-block;
+  justify-content: space-between;
+  list-style: none;
+  padding: 5px 5px;
+
+}
+
+.IngAmount{font-size: 0.9rem;
+  font-family: "Tillana", cursive;  
+}
+
+@media only screen and (min-width: 768px) {
+  .Card{
+    margin-right: 20px;
+    display: inline-flex;
+    width: 300px;
+    justify-content: space-between;
+  }
+}

@@ -29,14 +29,12 @@ h4 {
   text-transform: capitalize;
 }
 .Ingredients ul {
-
   margin: 0 ;
   padding: 0; 
 }
 
 .IngAmount{
   font-family: "Tillana", cursive;  
-  
 }
 
 .Ingredients li {
