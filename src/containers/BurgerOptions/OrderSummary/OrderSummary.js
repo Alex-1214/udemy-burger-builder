@@ -10,31 +10,23 @@ const orderSummary = (props) => (
     <div className={classes.Ingredients}>
       <ul>
         {Object.keys(props.ingredients).map((item) => {
-          return (<li key={item}>
-            <label>
-            {item}
-              </label>
-              <div className={classes.IngAmount}>{props.ingredients[item]} pc.</div>
-            </li>)
+          return (
+            <li key={item}>
+              <label>{item}</label>
+              <div className={classes.IngAmount}>
+                {props.ingredients[item]} pc.
+              </div>
+            </li>
+          );
         })}
       </ul>
     </div>
     <h4 className={classes.Price}>Total price</h4>
     <h2 className={classes.Price}>{props.totalPrice.toFixed(2)}</h2>
     <div className={classes.ModalButton}>
-      <button
-        className={[classes.OrderButton, classes.ModalButton].join(" ")}
-        onClick={props.orderBurgerHandler}
-      >
-        Order
-      </button>
-      <button
-        className={[classes.CancelButton, classes.ModalButton].join(" ")}
-        onClick={props.cancelPurchaseHandler}
-      >
-        Cancel
-      </button>
+    {props.children}
     </div>
+
   </div>
 );
 

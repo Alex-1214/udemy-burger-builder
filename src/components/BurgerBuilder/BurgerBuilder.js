@@ -1,18 +1,10 @@
-import axios from "axios";
+import axios from "../../axios-burger";
 import React, { Component } from "react";
 import Burger from "../../containers/Burger/Burger";
 import BurgerOptions from "../../containers/BurgerOptions/BurgerOptions";
 import Modal from "../../Layout/UI/Modal/Modal";
 import OrderSummary from "../../containers/BurgerOptions/OrderSummary/OrderSummary";
-
-// import orderSummary from "./BurgerOptions/OrderSummary/OrderSummary";
-
-// const INGREDIENT_PRICE = {
-//   meat: 1.8,
-//   cheese: 0.75,
-//   bacon: 0.8,
-//   salad: 0.35,
-// };
+import Button from "../../Layout/UI/Button/Button";
 
 class BurgerBuilder extends Component {
   constructor(props) {
@@ -36,11 +28,8 @@ class BurgerBuilder extends Component {
   }
 
   loadIngredients() {
-    console.log("loadIngredients");
     axios
-      .get(
-        "https://burger-graber-hunger-stopper-default-rtdb.firebaseio.com/ingredients.json"
-      )
+      .get("/ingredients.json")
       .then((response) => {
         console.log(response);
         this.setState({
@@ -80,19 +69,23 @@ class BurgerBuilder extends Component {
     this.setState({
       showModal: true,
     });
-  };  
+  };
 
   orderBurgerHandler = () => {
-    let param = Object.keys(this.state.ingredients).map(key =>{
-     return [...[encodeURIComponent(key) + "=" + encodeURIComponent(this.state.ingredients[key])]]
-    })
-
-    this.props.history.push({
-      pathname: '/checkout',
-      search: '?' + param.join('&')
+    let param = Object.keys(this.state.ingredients).map((key) => {
+      return [
+        ...[
+          encodeURIComponent(key) +
+            "=" +
+            encodeURIComponent(this.state.ingredients[key]),
+        ],
+      ];
     });
 
-
+    this.props.history.push({
+      pathname: "/checkout",
+      search: "?" + param.join("&"),
+    });
   };
 
   removedIngredientHandler = (type) => {
@@ -123,9 +116,14 @@ class BurgerBuilder extends Component {
           <OrderSummary
             totalPrice={this.state.totalPrice}
             ingredients={this.state.ingredients}
-            cancelPurchaseHandler={this.cancelPurchaseHandler}
-            orderBurgerHandler={this.orderBurgerHandler}
-          />
+          >
+            <Button type={"positive"} clicked={this.orderBurgerHandler}>
+              Checkout
+            </Button>
+            <Button type={"negative"} clicked={this.cancelPurchaseHandler}>
+              Cancel
+            </Button>
+          </OrderSummary>
         </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BurgerOptions

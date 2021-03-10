@@ -1,0 +1,25 @@
+.PositiveButton {
+  border: 5px solid #003049;
+  color: #003049;
+}
+
+.NegativeButton {
+  border: 5px solid #d62828;
+  color: #d62828;
+}
+
+.ModalButton {
+  margin: 10px auto;
+  display: block;
+  background: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 180px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
