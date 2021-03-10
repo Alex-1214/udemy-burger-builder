@@ -46,34 +46,3 @@ h4 {
   padding: 5px 50px;
 
 }
-
-.ModalButton {
-  margin: 0 auto;
-  display: block;
-  background: none;
-  border-radius: 30px;
-  cursor: pointer;
-  padding: 10px 0;
-  width: 180px;
-  font-weight: bold;
-}
-.ModalButton button {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.OrderButton {
-  border: 5px solid #003049;
-  color: #003049;
-}
-
-.CancelButton {
-  border: 5px solid #d62828;
-  color: #d62828;
-}
-
-@media only screen and (min-width: 601px) {
-  .ModalButton {
-    /* margin: 50px auto; */
-  }
-}
