@@ -13,9 +13,8 @@ class App extends Component {
         <Layout>
           <Switch>
           <Route path='/my-orders' component={MyOrders}/>
-          <Route path="/new" component={BurgerBuilder} />
           <Route path='/checkout' component={Checkout}/>
-
+          <Route path="/" exact component={BurgerBuilder} />
           {/* <Redirect from="" to="/new" /> */}
           </Switch>
 
