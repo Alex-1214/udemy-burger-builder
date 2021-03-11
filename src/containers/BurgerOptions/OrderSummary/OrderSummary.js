@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./OrderSummary.module.css";
 
 const orderSummary = (props) => (
-  <div>
+  <div className={classes.OrderSummery}>
     <h2>Smack'dat</h2>
     <h4>Your burger is made with </h4>
 

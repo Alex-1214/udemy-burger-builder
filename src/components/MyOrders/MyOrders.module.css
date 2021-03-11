@@ -1,20 +1,19 @@
-.MyOrders{
+.MyOrders {
   margin: 15vh 30px 0 30px;
 }
 
-h2 {
+.MyOrders h2 {
   text-align: left;
 }
 
-h4 {
+.MyOrders h4 {
   text-align: left;
 }
 
-.Cards{
+.Cards {
   overflow: auto;
   white-space: nowrap;
   /* display: inline-flex; */
   /* flex-flow: row; */
   justify-content: space-between;
-
 }
